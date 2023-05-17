@@ -1,0 +1,81 @@
+body {
+    background-color: #8a7bcb;
+    background-image: url(../img/pruebaflor2.jpg);
+    background-position: right top;
+    background-repeat: repeat;
+    /* background-size: cover; */ /* posibles valores cover y contain */
+    background-attachment: fixed;
+    font-family: 'Urbanist', sans-serif;
+    color:#000000;
+
+}
+/* Creamos un estilo para el contenedor principal diferente a la clase .container de Bootstrap para no interferir en sus estilos */
+.principal {
+    background-color: #8a7bcb; 
+    margin-top: 100px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    padding: 20px;
+}
+/* ---------- Estilos generales --------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Urbanist', sans-serif;
+    color:#eeeeee;
+}
+a, a:link, a:visited {
+    color: #8a7bcb;
+}
+a:hover, a:focus {
+    color: #202020;
+}
+.btn {
+    border-radius: 10px;
+}
+.btn-chol1, .btn-chol1:visited {
+    background-color: #1E5ED7;
+    color: #eeeeee;
+}
+.btn-chol1:hover, .btn-chol1:focus, .btn-chol1:visited {
+    background-color: 
+    color: #fff;
+}
+
+
+/* ---------- Navegación principal --------- */
+.nav-principal {
+    margin-bottom: 50px;
+    background-color: #eeeeee !important
+}
+.nav-principal a, .nav-principal a:link, .nav-principal a:visited {
+    color: #eeeeee;
+}
+.nav-principal a:hover, .nav-principal a:focus {
+    color: #202020;
+}
+.nav-principal .nav-link.active {
+    color: #202020;
+}
+
+/* ---------- Carrusel Home ---------------*/
+.carousel-home {
+    margin-bottom: 40px;
+}
+.carousel-home h5 {
+    color: #202020;
+}
+
+/* ------------Bloques internos ------------*/
+.bloque-interno {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+/* ------------ Mapa ----------- */
+.mapa-emb {
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+.mapa-emb .embed-responsive-item {
+    width: 100%;
+    height: 450px;
+}

@@ -1,0 +1,409 @@
+<!-- Tomamos el templete básico de la sección Quick start del sitio de Bootstrap
+     https://getbootstrap.com/docs/5.3/getting-started/introduction/#quick-start -->
+<!doctype html>
+<html lang="es">
+<!-- Comienza head -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="autor" content="Renee Vera">
+    <meta name="description" content="Ejercicio con Bootstrap sobre mi amigua Andreo :)">
+    <meta name="keywords" content="Bootstrap, Bootstrap 5.3, framework, html, css, maquetación web">
+    <!DOCTYPE html>
+
+    <title>Andrea Tumbas</title>
+    <link rel="icon" type="image/png" href="img/textila.jpg">
+
+
+    <title>Andrea Tumbas</title>
+    
+<!-- La hoja de estilo de Bootstrap se enlaza con un CDN proporcionado por Bootstrap. -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<!-- Cuando añadimos hojas de estilo propias es MUY IMPORTANTE colocarlas despues de la hoja de estilos de Bootstrap para que los estilos se sobreescriban correctamente en el navegador-->
+    <link href="css/estilos.css" rel="stylesheet" type="text/css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Urbanist:wght@300&family=Wix+Madefor+Text&display=swap" rel="stylesheet">
+
+
+  </head>
+
+  <!-- Comienza Body -->
+  <body>
+    <!-- La etiqueta header es un contenedor para elemento propios del encabezado de un sitio web.
+    Todos los elementos de header deben ser iguales en todas las pantallas de nuestro sitio. -->
+    <header>
+      <!-- Bootstrap nos proporciona un templete básico para los menús de navegación por medio de la etiqueta nav y la clase navbar.
+      Esta información se puede encontrar en https://getbootstrap.com/docs/5.3/components/navbar/ -->
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page">Andrea Tumbas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Acerca de</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Trabajo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Contacto</a>
+        </li>
+      </ul>
+    </header>
+     
+    
+
+    <!-- En Bootstrap trabajamos con tres tipos de contenedor: de ancho fijo (.container), fluido (.container-fluid) y de ancho específico (.container-{breakpoint}). Este último es específico para la versión 5.-->
+    <div class="container principal">
+    
+    <!-- En Bootstrap la clase .row indica una fila. Para más información de filas y columnas en Bootstrap revisa el link https://getbootstrap.com/docs/5.3/layout/grid/  -->  
+    <div class="row">
+      <!-- En Bootstrap la clase .col indica las columnas que estarán en el contenedor row. Podemos escribir la clase col o podemos indicar con número del 1 al 12 la cantidad de columnas que deberá abarcar.-->
+      <div class="col-12">
+
+        <!-- Este es un ejemplo de Carrusel con los elementos que proporciona Bootstrap. en este ejemplo estamos usando indicadores y textos de caption.
+        Para más referencias puedes consultar https://getbootstrap.com/docs/5.3/components/carousel/ -->
+
+        <h2 id="Acerca de">Acerca de</h2>
+        <div class="row">
+          <div class="col-md-8 offset-xs-1 text-left">
+            <p>Mi nombre real es Andrea Morales. Nací el 9 de junio en Chiapas, México, crecí y me mudé a la Ciudad de México para estudiar la licenciatura de diseño integral en el Instituto Nacional de Bellas Artes. Me gradué en 2019 y desde entonces he tenido trabajos formales y de freelance en el área de diseño gráfico, ilustración y animación. Me gusta experimentar con diferentes medios como la costura, pintura, dibujo digital y animación stop motion. Puedes checar mi trabajo en mi Behance aquí abajo.
+              Algunos de mis intereses son patinar, tocar la jarana, la natación y recientemente tatuar :) 
+              Me puedes encontrar dibujando en un Skatepark o en cualquier lugar, la verdad. 
+            </p>
+          </div>
+          <div class="col-md-4 text-right">
+            <!-- Bootstrap nos permite dar algunos estilos a las imágenes, así como ajustar la posición. En este caso estamos usando una clase que le redondea los bordes y la coloca al centro de la ventana. Para más opciones de imágenes puedes visitar https://getbootstrap.com/docs/5.3/content/images/ -->
+            <img src="img/andrea/andreo o;.jpeg" alt="Andreo" class="img-fluid rounded" width="250" height="250">
+          </div>
+        </div>
+        
+
+  
+
+    <!-- En la versión 5 los ejemplos de carrusel no están inicializados y hay que hacerlo de manera manual. En este caso, usamos el ejemplo que tiene indicadores, flechas y caption y tuvimos que agregar el atributo  data-bs-ride="false" en la primer línea para que el carrusel esté activo  -->
+    <h1>Trabajo</h1>
+    <div id="carouselExampleCaptions" class="carousel slide carousel-home" data-bs-ride="false">
+      <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      </div>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <img src="img/carrusel1.jpg" class="d-block w-100" alt="Andrea">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5>Sólo damas</h5>
+                  <p></p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="img/carrusel2.jpg" class="d-block w-100" alt="">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5></h5>
+                  <p></p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="img/carrusel3.jpg" class="d-block w-100" alt="">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5></h5>
+                  <p></p>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <img src="img/carrusel4.jpg" class="d-block w-100" alt="">
+              <div class="carousel-caption d-none d-md-block">
+                  <h5></h5>
+                  <p></p>
+              </div>
+          </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
+  </div>
+  
+    
+
+<!-- Inicia row -->
+<!-- En este bloque colocamos cuatro columnas. Además en cada columna colocaremos el contenido en formato de cards.
+Para más información de cards puedes visitar https://getbootstrap.com/docs/5.3/components/card/#about  -->
+<div class="row bloque-interno">   
+<h2 id=""></h2>
+<!-- En este ejemplo estamos aplicando tres clases para las columnas que funcionarán para el responsive. La clase que contiene lg es para la visualización en dispositivos grandes, la clase md para dispositivos medianos y sm para dispositivos pequeños.-->
+<div class="col-lg-3 col-md-6 col-sm-12">
+ 
+<!-- En estas vards haremos uso de las ventanas modales. Una ventana modal es aquella que se acciona desde un elemento, generalmente desde un botón y se despliega por encima del contenido mostrando información como puede ser imágenes, textos, botones e incluso se pueden agregar videos. Una ventana modal deberá tener elementos que permitan cerrarla.
+
+Se pueden agregar varias ventanas modales en un mismo documento pero es importante asignarle un ID a cada una como se puede ver en los ejemplos.
+
+Para más información de ventanas modales https://getbootstrap.com/docs/5.3/components/modal/ --> 
+ 
+  <!-- Inicia contenido de card -->
+  <div class="card">
+    <img src="img/calendario.jpg" class="card-img-top" alt="Calendario">
+    <div class="card-body">
+      <h5 class="card-title" id="gran-piramide">Drawn to skate</h5>
+  
+
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-chol1" data-bs-toggle="modal" data-bs-target="#modal1">
+  Conoce más
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Calendario>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/calendario.gif" class="card-img-top" alt="Calendario">
+        <br>
+       <p>Drawn to skate es un calendario del año 2020, lo trabajé durante los últimos meses de año 2019. El skate me ha ayudado a hacer muchas amistades, por eso cada mes esta inspirado en mis amigas y sus trucos favoritos.</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-chol1" data-bs-dismiss="modal">Cerrar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin modal -->
+
+    </div>
+  </div>
+  
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12">
+  <!-- Inicia contenido de card -->
+  <div class="card" >
+    <img src="img/Bolsas/toalla1.jpg">
+     <div class="card-body">
+      <h5 class="card-title" id="capilla-real">Textila</h5>
+     
+    
+       <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal2">
+  Conoce más
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Textila</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/pads.gif" class="card-img-top" alt="Capilla Real de Cholula">
+        <br>
+        <p class="card-text">Toallas femeninas hechas a mano bajo el nombre de mi marca "Textila".</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin modal -->
+
+
+    </div>
+  </div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12"> 
+  
+   <!-- Inicia contenido de card -->
+  <div class="card" >
+    <img src="img/museo.jpg" class="card-img-top" alt="Museos de CDMX">
+    <div class="card-body">
+      <h5 class="card-title" id="san-gabriel">Museos</h5>
+      
+   
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal3">
+  Conoce más
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Museo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/museo.gif" class="card-img-top" alt="Museos">
+        <br>
+        <p class="card-text">Serie de dibujos que realicé después de visitar varios museos de la Ciudad de México. Me ayuda a inspirarme para futuros proyectos.</p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fin modal -->
+    </div>
+  </div>
+
+</div>
+<div class="col-lg-3 col-md-6 col-sm-12"> 
+   <!-- Inicia contenido de card -->
+  <div class="card" >
+    <img src="img/Bolsas/bolsas.jpg" class="card-img-top" alt="Tote bags">
+    <div class="card-body">
+      <h5 class="card-title" id="caballero-aguila">Tote bags</h5>
+     
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal4">
+  Conoce más
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Tote bags</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="img/bolsas.gif" class="card-img-top" alt="Casa del Caballero Águila">
+        <br>
+        <p class="card-text">Bolsas tipo "tote bag" hechas de manta, con detalles de patchwork.</p>
+      
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fin modal -->
+   </div>
+  </div>
+</div>
+</div>
+
+<div class="card mb-3">
+  <video src="img/animación/Chicken.mp4" controls></video>
+    <div class="card-body">
+    <h5 class="card-title">Animación para Daniel "Chicken" Vela</h5>
+    <p class="card-text">Animación realizada con fotogramas ilustrados</p>
+    <p class="card-text"><small class="text-muted"></small></p>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div style="display: flex; justify-content: center; align-items: center;">
+  <video src="img/animación/Cara de gato.mp4" width="900" height="900"controls></video>
+    <div class="card-body">
+    <h5 class="card-title">Animación "Cara de gato" </h5>
+    <p class="card-text">Animación realizada con fotogramas ilustrados y fotografía de fondo</p>
+    <p class="card-text"><small class="text-muted"></small></p>
+  </div>
+  </div>
+</div>
+
+<div class="card mb-3">
+  <div style="display: flex; justify-content: center; align-items: left;">
+  <video src="img/animación/dibujatodo.mp4" width="700" height="700"controls></video>
+    <div class="card-body">
+    <h5 class="card-title">Animación "Dibuja todo" </h5>
+    <p class="card-text">Animación realizada con fotogramas ilustrados y fotografía de fondo</p>
+    <p class="card-text"><small class="text-muted"></small></p>
+  </div>
+  </div>
+</div>
+
+
+
+
+<!--Inicia card-->
+<div class="card text-center">
+  <div class="card-header">
+    
+    <div class="card-body">
+      <h5 class="card-title">Behance</h5>
+      <p class="card-text">En mi Behance puedes encontrar mis demás trabajos</p>
+      <a href="https://www.behance.net/andreatumbb440" target="_blank" class="btn btn-primary">Click aquí</a>
+  </div>
+  <div class="card-footer text-muted">
+      <!-- Contenido del pie de la tarjeta -->
+  </div>
+  
+  
+    
+  </div>
+</div>
+
+<!-- Inicia row -->
+<div class="row bloque-interno">
+  <!-- En ocasiones necesitamos que las columnas se "empujen" sin necesidad de crear columnas vacías, para esto se utliza la clase offset-. Para más información consulta el enlace https://getbootstrap.com/docs/5.3/layout/columns/#offsetting-columns -->
+  <div class="col-md-8 offset-md-2">
+<h2 id="informacion">Contáctame</h2>
+<!-- Formulario -->
+<form>
+  <!-- Bloque para información del nombre -->
+  <!-- La etiqueta label corresponde a la etiqueta del campo, es decir el título que lleva.
+  La etiqueta input se refiere al campo donde se va a ingresar la información. Existen varios tipos de input dependiendo del tipo de contenido, en este caso usamos text, y en el siguiente email. Para más iformación consulta el enlace https://www.w3schools.com/html/html_forms.asp  -->
+  <div class="mb-3">
+    <label  class="form-label">Nombre completo</label>
+    <input type="text" class="form-control"  placeholder="Escribe tu nombre completo">
+    <div id="emailHelp" class="form-text"></div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Escribe tu correo electrónico">
+    <div id="emailHelp" class="form-text">No compartiré tu correo con nadie.</div>
+  </div>
+  <div class="mb-3">
+    <label  class="form-label">Deja tu mensaje :)</label>
+    <!-- en este caso usamos textarea en vez de input para incluir contenido en forma de texto largo -->
+    <textarea class="form-control" placeholder="Describe la información que necesites"></textarea>
+  
+  </div>
+  <div class="mb-3 form-check">
+  
+  </div>
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+</div>
+</div>
+
+
+<!-- Bootstrap proporciona estilos para los botones, basta colocar la clase .btn en un hipervínculo para que se le asignen estilos de botón. Adicionalmente se debe colocar alguna clase de los diferentes estilos disponibles o crear una clase nueva. Los estilos los encuentras en https://getbootstrap.com/docs/5.3/components/buttons/  -->
+    <a href="#" class="btn btn-secondary">Volver arriba</a>
+    </div>
+   
+<!-- El archivo JavaScript también se enlaza por medio de un CDN proporcionado por Bootstrap.
+    Los recursos de JavaScript se colocan antes de cerrar la etiqueta body para evitar que la
+página tarde en cargar el contenido -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
